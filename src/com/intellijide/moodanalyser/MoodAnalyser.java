@@ -7,14 +7,10 @@ public class MoodAnalyser {
     }
 
         public String analyseMood(String message) {
-            try{
+
                 if (message.contains("sad"))
                     return "sad";
                 else
                     return "happy";
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
             }
-            return message;
         }
-    }
