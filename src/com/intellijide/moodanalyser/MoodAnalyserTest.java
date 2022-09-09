@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MoodAnalyserTest {
 
     @Test
-    void analyseMood() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String actual = moodAnalyser.analyseMood("I am in any mood");
-        Assertions.assertEquals("happy",actual);
+    void givenSadMoodShouldReturnSad() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in sad mood");
+        String actual = moodAnalyser.analyseMood();
+        Assertions.assertEquals("sad",actual);
     }
 }
