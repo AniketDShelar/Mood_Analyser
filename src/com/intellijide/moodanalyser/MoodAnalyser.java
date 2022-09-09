@@ -8,7 +8,7 @@ public class MoodAnalyser {
     public MoodAnalyser(String message) {
         this.message = message;
     }
-    public String analyseMood() {
+    public String analyseMood(){
         try {
             if (this.message.contains("sad"))
                 return "sad";
