@@ -7,15 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MoodAnalyserTest {
     @Test
-    void givenSadMoodShouldReturnSad() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in sad mood");
-        String actual = moodAnalyser.analyseMood();
-        Assertions.assertEquals("sad",actual);
-    }
-    @Test
-    void givenNullMoodShouldReturnHappy() {
+    void  givenNullMoodShouldThrowMoodAnalysisException() {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-        String actual = moodAnalyser.analyseMood();
+        String actual;
+        try {
+            actual = moodAnalyser.analyseMood();
+        } catch (Exception e) {
+            throw new RuntimeException("Invalid input " +e);
+        }
         Assertions.assertEquals("happy",actual);
     }
 }
