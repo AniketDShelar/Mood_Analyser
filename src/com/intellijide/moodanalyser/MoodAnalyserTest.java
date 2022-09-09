@@ -6,11 +6,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MoodAnalyserTest {
-
     @Test
-    void givenMessage_AnyMood_Should_Return_Sad() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in any mood");
+    void givenSadMoodShouldReturnSad() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in sad mood");
         String actual = moodAnalyser.analyseMood();
         Assertions.assertEquals("sad",actual);
+    }
+    @Test
+    void givenNullMoodShouldReturnHappy() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        String actual = moodAnalyser.analyseMood();
+        Assertions.assertEquals("happy",actual);
     }
 }
