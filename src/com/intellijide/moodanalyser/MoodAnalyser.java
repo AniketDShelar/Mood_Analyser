@@ -12,7 +12,7 @@ public class MoodAnalyser {
                     return "sad";
 
             } catch (Exception e) {
-                System.out.println(e.getMessage());
+                System.out.println("Wrong Input " +e.getMessage());
             }
                 return "Happy";
         }
